@@ -11,4 +11,5 @@
      register: slurpfile
      
      - name: print remote file
-     
+       ansible.builtin.debug:
+         msg: "{{ slurpfile['content'] |b64deode }}"
