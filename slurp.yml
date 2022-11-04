@@ -1,6 +1,6 @@
 ---
-- name: slurp demo
-  hosts: localhost
+- name: slurp module demo
+  hosts: all
   become: false
   vars: 
      remotefile: "/proc/cpuinfo"
@@ -12,4 +12,4 @@
      
      - name: print remote file
        ansible.builtin.debug:
-         msg: "{{ slurpfile['content'] |b64deode }}"
+         msg: "{{ slurpfile['content'] | b64deode }}"
