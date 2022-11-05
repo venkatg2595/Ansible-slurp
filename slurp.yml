@@ -1,6 +1,6 @@
 ---
  - name: slurp module demo
-   hosts: localhost
+   hosts: webservers
    become: false
    vars:
      remotefile: "/var/lib/jenkins/workspace/"
