@@ -3,7 +3,7 @@
    hosts: webservers
    become: false
    vars:
-     remotefile: "/var/lib/jenkins/workspace/"
+     remotefile: "/home"
      tasks:
      - name: slurp remote file
        ansible.builtin.slurp:
