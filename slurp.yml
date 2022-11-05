@@ -3,7 +3,7 @@
    hosts: localhost
    become: false
    vars:
-     remotefile: "/proc/cpuinfo"
+     remotefile: "/var/lib/jenkins/workspace/"
      tasks:
      - name: slurp remote file
        ansible.builtin.slurp:
