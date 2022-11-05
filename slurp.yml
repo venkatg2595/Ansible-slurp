@@ -1,6 +1,6 @@
 ---
 - name: slurp module demo
-  hosts: all
+  hosts: 54.87.163.254
   become: false
   vars: 
      remotefile: "/proc/cpuinfo"
