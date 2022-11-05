@@ -1,9 +1,9 @@
 ---
 - name: slurp module demo
-  hosts: all
+  hosts: webservers
   become: false
   vars: 
-     remotefile: "/proc/cpuinfo"
+     remotefile: "/home"
   tasks:
     - name: slurp remote file
      ansible.builtin.slurp:
