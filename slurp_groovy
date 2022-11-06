@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('scm checkout') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/venkatg2595/Ansible-slurp.git'
+            }
+        }
+        stage('read remote file') {
+            steps {
+                ansiblePlaybook colorized: true, credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'dev.inv', playbook: 'slurp.yml'
+            }
+        }
+    }
+}
